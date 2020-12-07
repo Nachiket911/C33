@@ -12,7 +12,7 @@ class Bird extends BaseClass {
 
     super.display();
 
-    if(this.body.velocity.x > 10 && this.body.position.x > 200){
+    if(this.body.velocity.x > 10 && this.body.position.x > 200 && gameState === "launched"){
       var position = [this.body.position.x, this.body.position.y];
       this.trajectory.push(position);
     }
@@ -22,4 +22,4 @@ class Bird extends BaseClass {
       image(this.smokeImage, this.trajectory[i][0], this.trajectory[i][1]);
     }
   }
-}
+} 
